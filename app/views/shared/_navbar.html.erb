@@ -1,17 +1,22 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+<div class="navbar navbar-expand-md navbar-custom bg-custom mb-4" id="collapseNavbar">
+
+      <!-- favarin logo -->
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <!-- hamburger menu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="menu-mobile-button"><i class="fas fa-bars"></i></span>
+      </button>
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+           <% if user_signed_in? %>
         <li class="nav-item active">
+          home
           <%= link_to "Home", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
@@ -26,10 +31,84 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+
+
+       <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chi Siamo</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" data-toggle="collapse" data-target="#dropdown-menu02">Cataloghi</a>
+            <div>
+              <div id="dropdown-menu02" class="dropdown-menu collapse" aria-labelledby="dropdown02" data-parent="#collapseNavbar">
+                <a class="dropdown-item" href="#">Elettrodomestico</a>
+                <a class="dropdown-item" href="#">Casalingo</a>
+                <a class="dropdown-item" href="#">Utensileria</a>
+                <a class="dropdown-item" href="#">Giardinaggio</a>
+                <a class="dropdown-item" href="#">Colori</a>
+                <a class="dropdown-item" href="#">Materiale Elettrico</a>
+                <a class="dropdown-item" href="#">Sistemi di 
+                  Fissaggio</a>
+                <a class="dropdown-item" href="#">Idraulica</a>
+                <a class="dropdown-item" href="#">Antinfortunistica</a>
+                  <a class="dropdown-item" href="#">Ferramenta</a>
+              </div>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#">Contattaci</a>
+          </li>
+          <div class="user-log-in d-flex justify-content-end">
+              
+            <button class="sign-in">
+                  <%= link_to "Crea Account", new_user_session_path %>
+            </button> 
+
+                <button class="log-in">
+                  <%= link_to "Login", new_user_session_path %>
+                </button> 
+              
+          </div>
+      
+        </ul>
       <% end %>
-    </ul>
-  </div>
-</div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
