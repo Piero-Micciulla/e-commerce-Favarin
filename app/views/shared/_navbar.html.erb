@@ -1,27 +1,31 @@
 
 
-<div class="navbar navbar-expand-md navbar-custom bg-custom mb-4" id="collapseNavbar">
-
+<div role="navigation" class="navbar navbar-expand-md navbar-custom bg-custom d-flex" id="collapseNavbar">
       <!-- favarin logo -->
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to "#", class: "navbar-brand mr-auto" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
-
+    
     <!-- hamburger menu -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="menu-mobile-button"><i class="fas fa-bars"></i></span>
+        <span class="menu-mobile-button"><i class="hamburger-icon fas fa-bars"></i></span>
       </button>
 
+    
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
+
+        <ul class="navbar-nav ml-auto">
+
            <% if user_signed_in? %>
         <li class="nav-item active">
           home
           <%= link_to "Home", "#", class: "nav-link" %>
         </li>
+
         <li class="nav-item">
           <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
+
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -30,12 +34,13 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-      <% else %>
 
+      <% else %>
 
        <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
+      </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#">Chi Siamo</a>
           </li>
@@ -69,13 +74,13 @@
                 <button class="log-in">
                   <%= link_to "Login", new_user_session_path %>
                 </button> 
-              
           </div>
-      
-        </ul>
       <% end %>
+        </ul>
       </div>
     </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#000" fill-opacity="1" d="M0,0L300,100L1440,0L1440,0L720,0L0,0Z"></path></svg>
 
 
 

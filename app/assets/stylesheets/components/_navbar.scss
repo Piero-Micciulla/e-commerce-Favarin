@@ -3,23 +3,27 @@
 .navbar-custom, .dropdown-menu  {
    background-color: black;
   font-size: 16px;
+  z-index: 0;
 }
+
 
 .navbar-custom .navbar-text,
 .dropdown-menu a:hover {
-    color: rgba(255,255,255,.8);
+    color: $nav-bar-hover-color;
     background-color: transparent;
 }
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link,
 .dropdown-menu a {
-    color: rgba(255,255,255,.5);
+    color: $nav-bar-link-color;
+     transition: 0.5s ease;
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
+     transition: 0.5s ease;
 }
 
 .navbar-brand img {
@@ -30,31 +34,25 @@
 background: transparent;
 margin: 0.3em;
 border: none;
+outline: transparent;
+box-shadow: transparent;
 	a {
-	color: #D4494F;
+	color: $red;
 	text-decoration: none;
 	font-weight: 900;
+  transition: 0.3s ease;
 		&:hover {
-			color: red;
+			color: white;
 		}
 	}
 
 }
 
-
-
 // HAMBURGER MENU
-.fas {
-	color: red;
+.hamburger-icon {
+	color: #FD1115;
 	font-size: 20px;
 }
-// change hamburger color
-.navbar-toggler:focus,
-.menu-mobile-button:focus {
-	outline: none;
-	box-shadow: none;
-}
-
 
 //DROPDOWN MENU
 .dropdown-menu.collapsing {
