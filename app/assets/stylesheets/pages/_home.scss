@@ -1,1 +1,94 @@
-// Specific CSS for your home-page
+//HOME 
+
+.banner {
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	//do not remove margin top! 
+	margin-top: -150px;
+	padding-top: 5em;
+	
+
+	
+	
+
+
+	.banner-header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		z-index: 1000;
+
+		.search-bar {
+			margin:1em 1.3em 0 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+
+			input {
+			@include input();
+			margin-right: 2px;
+			background: white;
+			box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+			}
+			button {
+				@include button();
+			}
+
+
+
+		}
+
+		.question-mark {
+			margin: 1em 1.3em 0 0;
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			font-weight: 900;
+			border: none;
+			background-color: $red;
+			border-radius: 50%;
+			color: white;
+			@media screen and (max-width: 576px) {
+			width: 25px;
+			height: 25px;
+			margin-right: 1.6em;
+			}
+		}
+	}
+
+	.banner-main {
+		display: flex;
+		margin: auto;
+		padding: 10vh 3vw;
+		.banner-image {
+			display: flex;
+			width: 50vw;
+			max-width: 500px;
+		@media screen and (max-width: 576px) {
+		width: 40vw;
+		}
+
+
+		}
+		.banner-title {
+			margin: 0.5em 0 0.5em -2em;
+			border: 1px solid red;
+			display: flex;
+			color: white;
+			text-transform: capitalize;
+			font-size: 3rem;
+			align-items: center;
+			text-align: center;
+			flex-wrap: wrap;
+			h3 {
+			padding: 1em;
+			}
+		}
+	}
+}

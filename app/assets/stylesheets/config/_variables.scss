@@ -1,0 +1,46 @@
+
+//bootstap default variables
+
+// General style
+$font-family-sans-serif:  $body-font;
+$headings-font-family:    $headers-font;
+$body-bg:                 $light-gray;
+$font-size-base: 1rem;
+
+// Colors
+$body-color: $gray;
+$primary:    $blue;
+$success:    $green;
+$info:       $yellow;
+$danger:     $red;
+$warning:    $orange;
+
+// Buttons & inputs' radius
+$border-radius:    2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
+
+// project variables
+
+input:focus, .navbar-toggler:focus,
+.menu-mobile-button:focus {
+	outline: transparent;
+	box-shadow: transparent;
+}
+
+@mixin button {
+	background-color: $red;
+	padding: 0.3em 0.8em;
+	color: white;
+	font-weight: 700;
+	border: none;
+	border-radius: 25px;
+	outline: transparent;
+	box-shadow: transparent;
+}
+
+@mixin input {
+		border: none;
+		background: gray;
+		border-radius: 15px;
+}
