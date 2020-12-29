@@ -1,51 +1,36 @@
-//HOME 
+// HOME 
+// 1. banner styling
+// 2. about(chi siamo) styling
+// 3. shops(negozi) styling
+
+
+
+
+
+// 1. BANNER
+.ghost-banner {
+	margin-top: -130px;
+  width:100%;
+  height: 13vh;
+  background:black;
+}
 
 .banner {
-	background-color: black;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	//do not remove margin top! 
-	margin-top: -150px;
-	padding-top: 5em;
-	
-
-	
-	
-
-
+padding-bottom: 8vh;
+background-color: black;
+margin: 0;
+width: 100%;
+display: flex;
+flex-direction: column;
 	.banner-header {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
+		margin-right: 1.6em;
 		z-index: 1000;
-
-		.search-bar {
-			margin:1em 1.3em 0 0;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-end;
-
-			input {
-			@include input();
-			margin-right: 2px;
-			background: white;
-			box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-
-			}
-			button {
-				@include button();
-			}
-
-
-
+		margin-top: -30px;
+		@media screen and (max-width: 922px) {
+		margin-top: 0;
 		}
-
+			
 		.question-mark {
-			margin: 1em 1.3em 0 0;
 			width: 30px;
 			height: 30px;
 			display: inline-block;
@@ -55,9 +40,9 @@
 			border-radius: 50%;
 			color: white;
 			@media screen and (max-width: 576px) {
-			width: 25px;
-			height: 25px;
-			margin-right: 1.6em;
+			width: 22px;
+			height: 22px;
+			font-size: 12px;
 			}
 		}
 	}
@@ -65,30 +50,136 @@
 	.banner-main {
 		display: flex;
 		margin: auto;
-		padding: 10vh 3vw;
+		width: 80%;
+		padding: 8vh 3vw;
+		@media screen and (max-width: 922px) {
+		width: 100%;
+		}
 		.banner-image {
 			display: flex;
-			width: 50vw;
-			max-width: 500px;
-		@media screen and (max-width: 576px) {
-		width: 40vw;
+			max-width: 400px;
+		@media screen and (max-width: 922px) {
+		width: 50vw;
 		}
 
 
 		}
 		.banner-title {
-			margin: 0.5em 0 0.5em -2em;
-			border: 1px solid red;
-			display: flex;
-			color: white;
-			text-transform: capitalize;
-			font-size: 3rem;
-			align-items: center;
-			text-align: center;
-			flex-wrap: wrap;
-			h3 {
-			padding: 1em;
+			color: rgba(255, 255, 255, 0.9);
+			padding-top:10vh;
+			width: 40%;
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 1.9rem;
+			@media screen and (max-width: 922px) {
+			width: 100%;
 			}
+			@media screen and (max-width: 786px) {
+			font-size: 1.3rem;
+			padding-top: 2vh;
+			}
+			p {
+			padding: 0.2em;
+			}
+			button {
+				@include button();
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+
+
+
+// ABOUT STYLING
+.about-description {
+	color: $font-color;	
+	margin-bottom: 20vh;
+	width: 70%;
+	flex-direction: row;
+	@media screen and  (max-width: 922px) {
+	width: 100%;
+	}
+	@media screen and (max-width: 786px) {
+			flex-direction: column;
+	}
+
+	h3 {
+		padding: 0.8rem;
+		font-weight: 900;
+		display: inline-block;
+		line-height: 5vh;
+		text-transform: capitalize;
+		@media screen and (max-width: 576px) {
+			font-size: 1.2rem;
+			}
+			span {
+			padding: 0.6em 0;
+			border-bottom: 1px solid black;
+			}
+	}
+
+	p {
+		padding: 0.8rem;
+		text-align: justify;
+		width: 95%;
+		@media screen and (max-width: 922px) {
+		width: 100%;
+		}
+		@media screen and (max-width: 576px) {
+			font-size: 0.9rem;
+		}
+	}
+	
+}
+
+//SHOP STYLING
+	h3 {
+		padding: 0.8rem;
+		font-weight: 900;
+		display: inline-block;
+		line-height: 5vh;
+		text-transform: capitalize;
+		@media screen and (max-width: 576px) {
+			font-size: 1.2rem;
+			}
+			span {
+			padding: 0.6em 0;
+			border-bottom: 1px solid black;
+			}
+	}
+.shops {
+	padding-top: 3vh;
+	color: $font-color;	
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+	@media screen and (max-width: 786px) {
+			flex-direction: column;
+	}
+	.box {
+		background: gray;
+		width: 600px;
+		height: 300px;
+		@media screen and (max-width: 786px) {
+			width: 100%;
+		}
+	}
+
+	.shop  {
+		background-color: rgba(255, 255, 254, 0.5);
+		margin: 0.3em;
+		text-align: center;
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+		h4 {
+			font-weight: 900;
+			padding: 1em 0;
+			@media screen and (max-width: 576px) {
+			font-size: 1.3rem;
+			}
+
 		}
 	}
 }
