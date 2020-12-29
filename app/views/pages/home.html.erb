@@ -1,24 +1,79 @@
 
-	<div class="banner">
-		<div class="banner-header">
-		 <form class="search-bar">
-		    <input type="search" placeholder="&#xF002;" aria-label="Search">
-		    <button type="submit">cerca</button>
-  		</form>	
-		<button class="question-mark">?</button>
-		</div>
 
-		
-		<div class="banner-main">
+<!----------------------------- 
+	BANNER SECTION 
+------------------------------>
+
+<!-- this ghost-banner div exists to fix the gap given from the nav-bar's svg, if removed there will be a white gap from navbar and banner. -->
+<div class="ghost-banner"></div>
+
+<div class="banner">
+	<div class="banner-header d-flex justify-content-end">
+	<button class="question-mark">?</button>
+	</div>
+
+	
+	<div class="banner-main">
 		<div>
 			<img  src="home-image.png" class="banner-image" alt="weelbarrow full of tools">
 		</div>
-		<div class="banner-title">
-			<h3>é piu facile con gli attrezzi giusti</h3>
-		</div>
+		<div class="banner-title d-flex flex-column align-items-center text-center">
+			<p>é piu facile quando usi gli attrezzi giusti!</p>
+			<button type="submit">vedi prodotti</button>
 		</div>
 	</div>
+</div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
-    	<path fill="#000" fill-opacity="1" d="M0,0L300,100L1440,0L1440,0L720,0L0,0Z"></path>
-    </svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+<path fill="#000" fill-opacity="1" d="M0,0L300,100L1440,0L1440,0L720,0L0,0Z"></path>
+</svg>
+
+
+<!----------------------------- 
+	ABOUT SECTION 
+------------------------------>
+
+	<div class="container about-description d-flex">
+		<div>
+		<h3><span>Chi s</span>iamo</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<img src="https://picsum.photos/300/200" alt="">
+	</div>
+
+
+<!----------------------------- 
+	SHOPS SECTION 
+------------------------------>
+
+<div class="container">
+	<h3><span>Dove</span> siamo</h3>
+<div class="shops d-flex">
+<div class="shops-details">
+	<div class="shop">
+		<h4>Presina</h4>
+		<p>049-5591272</p>
+		<p>Via Grantorto 22, 12345 Presina, PD</p>
+	</div>
+	<div class="shop">
+		<h4>Grantorto</h4>
+		<p>049-5591272</p>
+		<p>Via Grantorto 22, 12345 Presina, PD</p>
+	</div>
+</div>
+<div class="box"></div>
+</div>
+</div>
+
+<!----------------------------- 
+	CONTACT SECTION 
+------------------------------>
+

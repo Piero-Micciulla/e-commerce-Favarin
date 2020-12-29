@@ -2,10 +2,9 @@
 // NAVBAR STYLING
 .navbar-custom, .dropdown-menu  {
    background-color: black;
-  font-size: 16px;
+  font-size: 15px;
   z-index: 0;
 }
-
 
 .navbar-custom .navbar-text,
 .dropdown-menu a:hover {
@@ -27,15 +26,21 @@
 }
 
 .navbar-brand img {
-  width: 40px;
+  width: 220px;
+  height: auto;
+}
+
+.navbar-brand p {
+ color: white;
 }
 
 .user-log-in button {
-background: transparent;
-margin: 0.3em;
-border: none;
 outline: transparent;
 box-shadow: transparent;
+border: none;
+background: transparent;
+margin: 0.3em;
+
 	a {
 	color: $red;
 	text-decoration: none;
@@ -50,11 +55,10 @@ box-shadow: transparent;
 
 // HAMBURGER MENU
 .hamburger-icon {
-	color: #FD1115;
+	color: $red;
 	font-size: 20px;
 }
 
-//DROPDOWN MENU
 .dropdown-menu.collapsing {
   display: block;
 }
@@ -94,6 +98,28 @@ box-shadow: transparent;
     transform: translate(0, 0);
   }
 }
+
+//search bar 
+.search-bar {
+      input {
+      @include input();
+      width: 28vw;
+      min-width: 200px;
+      margin-right: 5px;
+      background: rgba(255, 255, 255, 0.1);
+        &::placeholder {
+          padding-left: 2px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+        &[type=search] {
+        color: rgba(255, 255, 255, 0.6);
+        padding-left: 6px;
+        }
+      }
+      button {
+        @include button();
+      }
+    }
 
 
 

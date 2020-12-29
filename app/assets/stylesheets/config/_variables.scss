@@ -20,6 +20,13 @@ $border-radius:    2px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
+
+//page setting 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 // project variables
 
 input:focus, .navbar-toggler:focus,
@@ -29,18 +36,23 @@ input:focus, .navbar-toggler:focus,
 }
 
 @mixin button {
-	background-color: $red;
-	padding: 0.3em 0.8em;
+	background-color: black;
+	border: 1px solid $red;
+	padding: 0.2em 0.8em;
 	color: white;
 	font-weight: 700;
-	border: none;
 	border-radius: 25px;
 	outline: transparent;
 	box-shadow: transparent;
+	@media screen and (max-width: 576px) {
+			font-size: 0.8rem;
+			}
 }
 
 @mixin input {
 		border: none;
-		background: gray;
 		border-radius: 15px;
+		background: white;
+		padding: 0.3em;
+		box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
