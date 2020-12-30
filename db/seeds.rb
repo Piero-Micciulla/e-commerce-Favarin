@@ -225,125 +225,125 @@ puts "Creating 7 reviews"
 
 # CREATING PRODUCTS FOR SHOPs
 
-Shop.all.each do |shop|
+
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: presina.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
         price: (200..500).to_a.sample,
         reference_number: (100000..999999).to_a.sample,
-        shop: shop,
+        shop_id: grantorto.id,
         category: CATEGORIES.sample,
         )
-      puts "Created #{shop.products.count} products for shops..."
-  end
+      puts "Created #{Product.count} products for shops..."
+
