@@ -26,8 +26,14 @@
 }
 
 .navbar-brand img {
-  width: 220px;
+  width: 270px;
   height: auto;
+   @media screen and (max-width: 786px) {
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 576px) {
+    width: 200px;
+  }
 }
 
 .navbar-brand p {
@@ -101,25 +107,44 @@ margin: 0.3em;
 
 //search bar 
 .search-bar {
+  
       input {
       @include input();
+      font-family: FontAwesome;
       width: 28vw;
       min-width: 200px;
       margin-right: 5px;
       background: rgba(255, 255, 255, 0.1);
         &::placeholder {
+          font-family: $body-font;
           padding-left: 2px;
           color: rgba(255, 255, 255, 0.6);
         }
         &[type=search] {
         color: rgba(255, 255, 255, 0.6);
         padding-left: 6px;
+        font-family: $body-font;
         }
       }
       button {
         @include button();
       }
-    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

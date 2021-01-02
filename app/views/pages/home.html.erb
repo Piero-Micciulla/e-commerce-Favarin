@@ -5,7 +5,7 @@
 ------------------------------>
 
 <!-- this ghost-banner div exists to fix the gap given from the nav-bar's svg, if removed there will be a white gap from navbar and banner. -->
-<div class="ghost-banner"></div>
+<div id="home" class="ghost-banner"></div>
 
 <div class="banner">
 	<div class="banner-header d-flex justify-content-end">
@@ -34,7 +34,7 @@
 	ABOUT SECTION 
 ------------------------------>
 
-	<div class="container about-description d-flex">
+	<div id="about" class="container about-description d-flex">
 		<div>
 		<h3><span>Chi s</span>iamo</h3>
 			<p>
@@ -46,24 +46,28 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</div>
-		<img src="https://picsum.photos/300/200" alt="">
+		<img src="https://picsum.photos/450" alt="">
 	</div>
 
 
 <!----------------------------- 
 	SHOPS SECTION 
 ------------------------------>
-
-<div class="container">
+<div id="shops" class="shops-container">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+<path fill="#F4F4F4" fill-opacity="1" d="M0,0L300,100L1440,0L1440,0L720,0L0,0Z"></path>
+</svg>
+	
+<div class="container mb-5">
 	<h3><span>Dove</span> siamo</h3>
-<div class="shops d-flex">
-<div class="shops-details">
-	<div class="shop">
+<div class="shops">
+<div class="shops-details d-flex">
+	<div class="card shop">
 		<h4>Presina</h4>
 		<p>049-5591272</p>
 		<p>Via Grantorto 22, 12345 Presina, PD</p>
 	</div>
-	<div class="shop">
+	<div class="card shop">
 		<h4>Grantorto</h4>
 		<p>049-5591272</p>
 		<p>Via Grantorto 22, 12345 Presina, PD</p>
@@ -72,8 +76,52 @@
 <div class="box"></div>
 </div>
 </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+<path fill="#D01D3C" fill-opacity="1" d="M0,0L300,100L1440,0L1440,0L720,0L0,0Z"></path>
+</svg>
+	
+<!----------------------------- 
+	REVIEWS SECTION 
+------------------------------>
+
+
+<div class="reviews">
+	<div class="container d-flex">
+		<div class="card review">
+			reviews
+		</div>
+		<div class="card review">reviews</div>
+		<div class="card review">reviews</div>
+	</div>
+	
+</div>
 
 <!----------------------------- 
 	CONTACT SECTION 
 ------------------------------>
+
+<div id="contact" class="container">
+	<div class="d-flex contacts-box">
+	<div class="form">
+	<h3><span>Conta</span>ttaci</h3>
+	<p>Per qualsiasi domanda o informazione, scrivici qui:</p>
+<form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+   <div class="form-group">
+  <textarea class="form-control rounded-2" rows="3"></textarea>
+</div>
+  </div>
+</form>
+	</div>	
+	<img class="img-fluid" src="mailss.png" alt="">
+	</div>
+</div>
 
