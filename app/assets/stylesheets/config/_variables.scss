@@ -7,6 +7,7 @@ $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
 $font-size-base: 1rem;
 
+
 // Colors
 $body-color: $gray;
 $primary:    $blue;
@@ -23,9 +24,11 @@ $border-radius-sm: 2px;
 
 //page setting 
 * {
+	color: $font-color;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 // project variables
 
@@ -54,5 +57,4 @@ input:focus, .navbar-toggler:focus,
 		border-radius: 15px;
 		background: white;
 		padding: 0.3em;
-		box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }

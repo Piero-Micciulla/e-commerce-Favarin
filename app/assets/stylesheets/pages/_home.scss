@@ -2,6 +2,8 @@
 // 1. banner styling
 // 2. about(chi siamo) styling
 // 3. shops(negozi) styling
+// 4. reviews styling
+// 5. contacts styling
 
 
 
@@ -16,7 +18,6 @@
 }
 
 .banner {
-padding-bottom: 8vh;
 background-color: black;
 margin: 0;
 width: 100%;
@@ -31,8 +32,8 @@ flex-direction: column;
 		}
 			
 		.question-mark {
-			width: 30px;
-			height: 30px;
+			width: 27px;
+			height: 25px;
 			display: inline-block;
 			font-weight: 900;
 			border: none;
@@ -50,14 +51,14 @@ flex-direction: column;
 	.banner-main {
 		display: flex;
 		margin: auto;
+		padding: 15vh 2vw;
 		width: 80%;
-		padding: 8vh 3vw;
 		@media screen and (max-width: 922px) {
 		width: 100%;
 		}
 		.banner-image {
-			display: flex;
-			max-width: 400px;
+		display: flex;
+		max-width: 400px;
 		@media screen and (max-width: 922px) {
 		width: 50vw;
 		}
@@ -65,11 +66,10 @@ flex-direction: column;
 
 		}
 		.banner-title {
-			color: rgba(255, 255, 255, 0.9);
-			padding-top:10vh;
 			width: 40%;
 			text-transform: uppercase;
 			font-weight: 800;
+			padding-top: 10vh;
 			font-size: 1.9rem;
 			@media screen and (max-width: 922px) {
 			width: 100%;
@@ -80,6 +80,7 @@ flex-direction: column;
 			}
 			p {
 			padding: 0.2em;
+			color: white;
 			}
 			button {
 				@include button();
@@ -94,19 +95,18 @@ flex-direction: column;
 
 // ABOUT STYLING
 .about-description {
-	color: $font-color;	
-	margin-bottom: 20vh;
-	width: 70%;
+	margin: 20vh auto;
+	color: $font-color;
 	flex-direction: row;
-	@media screen and  (max-width: 922px) {
-	width: 100%;
-	}
 	@media screen and (max-width: 786px) {
+				margin: 10vh auto;
+	}
+	@media screen and (max-width: 992px) {
 			flex-direction: column;
 	}
 
 	h3 {
-		padding: 0.8rem;
+			padding: 3em 0;
 		font-weight: 900;
 		display: inline-block;
 		line-height: 5vh;
@@ -134,9 +134,17 @@ flex-direction: column;
 	
 }
 
-//SHOP STYLING
+//SHOPS STYLING
+.shops-container {
+	background: #D01D3C;
+	// background: rgba(217, 4, 41, 0.9);
+	color: $font-color;
+	padding-bottom: 3em;
+ 
+
 	h3 {
-		padding: 0.8rem;
+		color: $light-gray;
+		padding: 3em 0;
 		font-weight: 900;
 		display: inline-block;
 		line-height: 5vh;
@@ -145,41 +153,106 @@ flex-direction: column;
 			font-size: 1.2rem;
 			}
 			span {
+			color: $light-gray;	
 			padding: 0.6em 0;
-			border-bottom: 1px solid black;
+			border-bottom: 1px solid $light-gray;
 			}
 	}
+
 .shops {
-	padding-top: 3vh;
-	color: $font-color;	
-	flex-direction: row;
-	width: 100%;
-	height: 100%;
-	@media screen and (max-width: 786px) {
+	color: $font-color;
+	
+
+	.shops-details {
+		flex-direction: row;
+		margin-bottom: 0.5em;
+		@media screen and (max-width: 786px) {
 			flex-direction: column;
 	}
+	}
 	.box {
-		background: gray;
-		width: 600px;
+		background: lightgray;
+		width: 100%;
 		height: 300px;
-		@media screen and (max-width: 786px) {
-			width: 100%;
-		}
+
 	}
 
 	.shop  {
-		background-color: rgba(255, 255, 254, 0.5);
+		flex: 1;
+		background-color: white;
 		margin: 0.3em;
 		text-align: center;
-		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
 		h4 {
 			font-weight: 900;
 			padding: 1em 0;
+			color: $font-color;
+		text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 			@media screen and (max-width: 576px) {
 			font-size: 1.3rem;
 			}
 
 		}
+	}
+}
+}
+
+
+
+//REVIEWS STYLING
+
+.reviews {
+	padding: 10em 0;
+	margin: auto;
+	.review {
+		color: $font-color;
+		align-items: center;
+		justify-content: center;
+		margin: 1em;
+		height: 200px;
+		width: 400px;
+		background-color: rgba(255, 255, 254, 0.5);
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+	}
+}
+
+
+// CONTACT STYLING
+
+
+#contact {
+	.contacts-box {
+		flex-direction: row;
+		@media screen and (max-width: 922px) {
+			flex-direction: column;
+		}
+		.form {
+			flex: 1;
+			input {
+				@include input();
+			}
+
+			h3 {
+				padding: 3em 0;
+				font-weight: 900;
+				display: inline-block;
+				line-height: 5vh;
+				text-transform: capitalize;
+				@media screen and (max-width: 576px) {
+					font-size: 1.2rem;
+					}
+					span {
+					padding: 0.6em 0;
+					border-bottom: 1px solid black;
+					}
+			}
+			}
+		}
+
+	img {
+		flex: 1;
+		width: 250px;
+		height: auto;
 	}
 }

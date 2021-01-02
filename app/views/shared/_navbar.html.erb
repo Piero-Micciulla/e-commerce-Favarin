@@ -1,7 +1,10 @@
 
 <div role="navigation" class="navbar navbar-expand-lg navbar-custom bg-custom" id="collapseNavbar">
         <!-- favarin logo -->
-     <a class="navbar-brand" href=""><img src="favarin.png" alt="company-logo"></a>
+        <%= link_to "Home", class: "navbar-brand" do %> 
+        <%= image_tag 'favarin.png' %>
+        <% end %>
+     
 
 
         <!-- hamburger menu -->
@@ -12,7 +15,7 @@
 
       <div class="collapse navbar-collapse flex-column align-items-end" id="navbarCollapse">
 
-          <ul class="navbar-nav my-2">
+          <ul class="navbar-nav m-2">
 
              <% if user_signed_in? %>
           <li class="nav-item active">
@@ -36,11 +39,11 @@
         <% else %>
 
          <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
         </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Chi Siamo</a>
+              <a class="nav-link" href="#about">Chi Siamo</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" data-toggle="collapse" data-target="#dropdown-menu02">Cataloghi</a>
@@ -61,10 +64,10 @@
               </div>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Negozi</a>
+              <a class="nav-link" href="#shops">Negozi</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="#">Contattaci</a>
+              <a class="nav-link" href="#contact">Contattaci</a>
             </li>
             <div class="user-log-in d-flex justify-content-end">
 
@@ -78,8 +81,8 @@
             </div>
         <% end %>
           </ul>
-      <form class="search-bar d-flex justify-content-end mb-1">
-        <input type="search" placeholder="&#xF002;" aria-label="Search">
+      <form class="search-bar d-flex justify-content-end mb-1 mx-2">
+        <input type="search"  placeholder="Cerca qui" aria-label="Search">
         <button type="submit">cerca</button>
       </form> 
         </div>
