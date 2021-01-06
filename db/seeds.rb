@@ -80,7 +80,7 @@ admin = User.create(
     password: "123456",
     city: "Grantorto",
     post_code: "35010",
-    country: "Italy"
+    country: "Italy",
     )
 
 puts "Created #{User.count} admin!"
