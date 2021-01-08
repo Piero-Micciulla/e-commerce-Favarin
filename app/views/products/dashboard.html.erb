@@ -1,26 +1,6 @@
-<!-- to the shop -->
-<p class="back-to-store">See your storefront</p>
-<%= link_to shop_path(current_user.shops[0]) %>
-<%= link_to shop_path(current_user.shops[1]) %>
-<!-- reviews -->
-<h1>Read recent reviews</h1>
-<% current_user.shops.each do |shop| %>
-<%= shop.reviews.each do |review| %>
-<%= review.content %>
-<%= review.created_at.strftime("%m/%d/%Y") %>
-<p> Written by </p> &nbsp
-<p style="margin: 5px;">
-    <%= review.user.given_name %>
-</p> &nbsp
-<p style="margin: 5px;">
-    <%= review.user.family_name %>
-</p>
+
+<% if current_user.shops != [] %>
+  <%= render 'owner_dash' %>
+<% else %>
+  <%= render 'user_dash' %>
 <% end %>
-<% end %>
-<!-- check products  -->
-<h3>Your stock</h3>
-<%= render "index" %>
-<!-- add a product -->
-<%= render "new" %>
-<!-- show a product -->
-<%= render "show" %>

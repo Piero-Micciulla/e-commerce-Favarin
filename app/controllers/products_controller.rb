@@ -2,12 +2,16 @@ class ProductsController < ApplicationController
   before_action :find_products, except: [:dashboard, :create, :index, :new]
 
   def dashboard
+    @shops = Shop.all
     @products = Product.all
     @product = Product.new
   end
 
   def index
     @products = Product.all
+  end
+
+  def show
   end
 
   def new
