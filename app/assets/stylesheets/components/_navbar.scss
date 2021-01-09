@@ -5,6 +5,11 @@
   font-size: 15px;
   z-index: 0;
 }
+input:focus, input:active, .navbar-toggler:focus,
+.menu-mobile-button:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 .navbar-custom .navbar-text,
 .dropdown-menu a:hover {
