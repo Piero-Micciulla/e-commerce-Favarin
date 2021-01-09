@@ -1,0 +1,28 @@
+<!-- to the shop -->
+<p>See your storefront</p>
+<%= link_to "I tuoi Negozi", shops_path %>
+<!-- reviews -->
+<h1>Read recent reviews</h1>
+<% current_user.shops.each do |shop| %>
+<% shop.reviews.each do |review| %>
+<li class="list-group-item">
+      <%= review.content %>
+<%= review.created_at.strftime("%m/%d/%Y") %>
+<p> Written by </p> &nbsp
+<p style="margin: 5px;">
+    <%= review.user.given_name %>
+    <%= review.user.family_name %>
+</p>
+
+    </li>
+
+
+<% end %>
+<% end %>
+<!-- check products  -->
+<h3>Your stock</h3>
+<%= render "index" %>
+<!-- add a product -->
+<h3>Add a new product to your shop selection</h3>
+<%= render "new" %>
+

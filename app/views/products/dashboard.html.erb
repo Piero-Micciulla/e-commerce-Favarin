@@ -1,0 +1,6 @@
+
+<% if current_user.shops != [] %>
+  <%= render 'owner_dash' %>
+<% else %>
+  <%= render 'user_dash' %>
+<% end %>

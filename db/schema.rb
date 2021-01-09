@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_12_26_172610) do
+=======
+ActiveRecord::Schema.define(version: 2021_01_08_173143) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carts", force: :cascade do |t|
+    t.date "pick_up_date"
+    t.integer "status"
+    t.float "total_price"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer "price"
+    t.string "reference_number"
+    t.string "category"
+    t.boolean "sold_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.bigint "shop_id"
+    t.index ["shop_id"], name: "index_products_on_shop_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "shop_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["shop_id"], name: "index_reviews_on_shop_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "shops", force: :cascade do |t|
     t.text "address"
@@ -47,5 +83,8 @@ ActiveRecord::Schema.define(version: 2020_12_26_172610) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "carts", "users"
+  add_foreign_key "products", "shops"
+  add_foreign_key "reviews", "shops"
   add_foreign_key "shops", "users"
 end
