@@ -347,3 +347,37 @@ puts "Creating 7 reviews"
         )
       puts "Created #{Product.count} products for shops..."
 
+puts "Creating 5 carts"
+
+cart_1 = Cart.create(
+  pick_up_date: Date.today,
+  user_id: user_buyer_5.id,
+  status: "confirmed"
+  )
+
+cart_2 = Cart.create(
+  pick_up_date: Date.tomorrow,
+  user_id: user_buyer_5.id,
+  status: "confirmed"
+  )
+
+cart_3 = Cart.create(
+  pick_up_date: Date.tomorrow,
+  user_id: user_buyer_5.id,
+  status: "pending"
+  )
+
+cart_4 = Cart.create(
+  pick_up_date: Date.tomorrow,
+  user_id: user_buyer_2.id,
+  status: "pending"
+  )
+
+cart_5 = Cart.create(
+  pick_up_date: Date.tomorrow,
+  user_id: user_buyer_4.id,
+  status: "confirmed"
+  )
+
+puts "Created #{Cart.count} carts"
+
