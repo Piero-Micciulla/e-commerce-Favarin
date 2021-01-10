@@ -1,4 +1,4 @@
-// HOME 
+// HOME
 // 1. banner styling
 // 2. about(chi siamo) styling
 // 3. shops(negozi) styling
@@ -104,7 +104,7 @@
 
 
 
-// 2. ABOUT 
+// 2. ABOUT
 .about-description {
     margin: 20vh auto;
     color: $font-color;
@@ -151,7 +151,7 @@
 
 }
 
-// 3. SHOPS 
+// 3. SHOPS
 .shops-container {
     background: #D01D3C;
     color: $font-color;
@@ -253,7 +253,7 @@
     	form {
     		width: 100%;
     	}
-       
+
         input,
         textarea {
             @include input();
@@ -293,7 +293,7 @@
         		display: none;
         	}
         }
-	}      
+	}
 }
 
 
@@ -308,7 +308,7 @@ footer {
 			font-size: 12px;
 			font-weight: 300;
 			line-height: 2px;
-		
+
 	}
 
 	h5 {
@@ -320,7 +320,7 @@ footer {
 
 	.footer-container {
 		width: 100%;
-		
+
 
 		.links-container {
 				width: 100%;
@@ -343,14 +343,14 @@ footer {
 		}
 
 		.social-container {
-			
+
 			width: 100%;
 			  padding: 1rem;
 			  display: flex;
 			  align-items: center;
 			  justify-content: center;
 			  align-items: center;
-			  
+
   		}
 	}
 }
