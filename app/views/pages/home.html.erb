@@ -57,11 +57,16 @@
 ------------------------------>
 <div class="reviews">
     <div class="container d-flex">
-        <div class="card review">
-            reviews
+      <% Shop.first.reviews.each do |review| %>
+        <div class="notification">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="notification-content">
+            <p><small><%= review.created_at.strftime("%m/%d/%Y") %></small></p>
+            <div class="review-content"><%= review.content %></div>
+            <p><small><%= review.user.given_name %> <%= review.user.family_name %></small></p>
+          </div>
         </div>
-        <div class="card review">reviews</div>
-        <div class="card review">reviews</div>
+        <% end %>
     </div>
 </div>
 <!-----------------------------
