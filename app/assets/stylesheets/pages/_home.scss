@@ -32,23 +32,6 @@
         @media screen and (max-width: 922px) {
             margin-top: 0;
         }
-
-        .question-mark {
-            width: 27px;
-            height: 25px;
-            display: inline-block;
-            font-weight: 900;
-            border: none;
-            background-color: $red;
-            border-radius: 50%;
-            color: white;
-
-            @media screen and (max-width: 576px) {
-                width: 22px;
-                height: 22px;
-                font-size: 12px;
-            }
-        }
     }
 
     .banner-main {
@@ -139,6 +122,9 @@
         padding: 0.8rem;
         text-align: justify;
         width: 95%;
+    }
+
+}
 
         @media screen and (max-width: 922px) {
             width: 100%;
@@ -147,9 +133,6 @@
         @media screen and (max-width: 576px) {
             font-size: 0.9rem;
         }
-    }
-
-}
 
 // 3. SHOPS
 .shops-container {
@@ -243,6 +226,22 @@
 // 5. CONTACT
 
 #contact {
+    h3 {
+        padding: 3em 0;
+        font-weight: 900;
+        display: inline-block;
+        line-height: 5vh;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 576px) {
+            font-size: 1.2rem;
+        }
+
+        span {
+            padding: 0.6em 0;
+            border-bottom: 1px solid black;
+        }
+    }
 
 	.info-content {
 		flex-direction: row;
@@ -269,22 +268,6 @@
         textarea:active {
             outline: none;
             box-shadow: none;
-        }
-        h3 {
-            padding: 3em 0;
-            font-weight: 900;
-            display: inline-block;
-            line-height: 5vh;
-            text-transform: capitalize;
-
-            @media screen and (max-width: 576px) {
-                font-size: 1.2rem;
-            }
-
-            span {
-                padding: 0.6em 0;
-                border-bottom: 1px solid black;
-            }
         }
         img {
         	padding: 30px;

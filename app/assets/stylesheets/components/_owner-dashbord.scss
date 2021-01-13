@@ -1,0 +1,59 @@
+
+
+// list
+.dashbord-back {
+  padding-top: 150px;
+  margin-top: -150px;
+  padding-right: 10px;
+  padding-left: 10px;
+background-color: black;
+
+  h3 {
+    padding-bottom: 20px;
+    color: rgb(184, 184, 184);
+  }
+  .dashbord {
+  background-color: rgba(68, 68, 68, 0.192);
+  border-radius: 10px;
+    width: 100%;
+
+    .dashbord-grid {
+        padding-top: 10px;
+      .dashbord-links-items {
+          padding-top: 40px;
+        .nav-tabs {
+        list-style: none;
+
+        .nav-item{
+          padding: 20px 0;
+          &:hover {
+            color: $nav-bar-hover-color;
+            background-color: rgba(68, 68, 68, 0.226);
+            border-left:  1px solid $red;
+          }
+
+          a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+            padding-left: 10px;;
+
+          }
+        }
+        }
+      }
+    }
+  }
+
+
+  // content
+
+  .dashbord-content {
+    background-color: $light-gray;
+    border-radius: 50px 0 0 0;
+    .tab-content {
+      padding-top: 50px;
+      padding-left: 10px;
+    }
+  }
+}
