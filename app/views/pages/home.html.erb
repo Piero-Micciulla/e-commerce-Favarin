@@ -43,23 +43,9 @@
     </svg>
     <div class="container mb-5">
         <h3><span>Dove</span> siamo</h3>
-        <div class="shops">
-            <div class="shops-details d-flex">
-                <div class="card shop">
-                    <h4>Presina</h4>
-                    <p>049-5591272</p>
-                    <p>Via Grantorto 22, 12345 Presina, PD</p>
-                </div>
-                <div class="card shop">
-                    <h4>Grantorto</h4>
-                    <p>049-5591272</p>
-                    <p>Via Grantorto 22, 12345 Presina, PD</p>
-                </div>
-            </div>
-            <div class="box"></div>
-        </div>
+        <%= render "shops/index", locals: { shops: @shop } %>
     </div>
-</div>
+  </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
     <path fill="#D01D3C" fill-opacity="1" d="M0,0L300,100L1440,0L1440,0L720,0L0,0Z"></path>
 </svg>
@@ -68,11 +54,16 @@
 ------------------------------>
 <div class="reviews">
     <div class="container d-flex">
-        <div class="card review">
-            reviews
+      <% Shop.first.reviews.each do |review| %>
+        <div class="notification">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="notification-content">
+            <p><small><%= review.created_at.strftime("%m/%d/%Y") %></small></p>
+            <div class="review-content"><%= review.content %></div>
+            <p><small><%= review.user.given_name %> <%= review.user.family_name %></small></p>
+          </div>
         </div>
-        <div class="card review">reviews</div>
-        <div class="card review">reviews</div>
+        <% end %>
     </div>
 </div>
 <!-----------------------------
