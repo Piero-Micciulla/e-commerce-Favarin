@@ -1,28 +1,72 @@
-<!-- to the shop -->
-<p>See your storefront</p>
-<%= link_to "I tuoi Negozi", shops_path %>
-<!-- reviews -->
-<h1>Read recent reviews</h1>
-<% current_user.shops.each do |shop| %>
-<% shop.reviews.each do |review| %>
-<li class="list-group-item">
-      <%= review.content %>
-<%= review.created_at.strftime("%m/%d/%Y") %>
-<p> Written by </p> &nbsp
-<p style="margin: 5px;">
-    <%= review.user.given_name %>
-    <%= review.user.family_name %>
-</p>
 
-    </li>
+<div class="d-flex flex-column p- dashbord-back">
+<h3>Welcome $name</h3>
+<div class="container-fluid dashbord">
+<div class="row dashbord-grid">
+  <div class="col-2  pr-0 pb-0 pl-0 dashbord-links-items">
+    <ul class="nav-tabs tabs-left p-0 ">
+
+      <li class="nav-item"><a href="#home" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Home</a></li>
+      <li class="nav-item"><a href="#negozi" data-toggle="tab" role="tab" aria-controls="negozi" aria-selected="true">Negozi</a></li>
+      <li class="nav-item"><a href="#reviews" data-toggle="tab" role="tab" aria-controls="reviews" aria-selected="true">Reviews</a></li>
+      <li class="nav-item"><a href="#prodotti" data-toggle="tab" role="tab" aria-controls="prodotti" aria-selected="true">Prodotti</a></li>
+    </ul>
+  </div>
+
+  <div class="col-10 dashbord-content">
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <div class="tab-pane active" id="home">
+        empty
 
 
-<% end %>
-<% end %>
-<!-- check products  -->
-<h3>Your stock</h3>
-<%= render "index" %>
-<!-- add a product -->
-<h3>Add a new product to your shop selection</h3>
-<%= render "new" %>
+      </div>
+
+      <div class="tab-pane" id="negozi">
+        <%= link_to "I tuoi Negozi", shops_path %>
+
+      </div>
+
+
+      <div class="tab-pane" id="reviews">
+                <!-- reviews -->
+            <h1>Read recent reviews</h1>
+            <% current_user.shops.each do |shop| %>
+            <% shop.reviews.each do |review| %>
+            <li class="list-group-item">
+            <%= review.content %>
+            <%= review.created_at.strftime("%m/%d/%Y") %>
+            <p> Written by </p> &nbsp
+            <p style="margin: 5px;">
+            <%= review.user.given_name %>
+            <%= review.user.family_name %>
+            </p>
+
+            </li>
+            <% end %>
+            <% end %>
+      </div>
+
+      <div class="tab-pane" id="prodotti">
+
+                    <!-- check products  -->
+                <h3>Your stock</h3>
+                <%= render "index" %>
+                <!-- add a product -->
+                <h3>Add a new product to your shop selection</h3>
+                <%= render "new" %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
 

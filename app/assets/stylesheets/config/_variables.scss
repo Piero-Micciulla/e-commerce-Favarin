@@ -22,14 +22,7 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 
-//page setting 
-* {
-	color: $font-color;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-}
+
 // project variables
 
 @mixin button {
@@ -50,5 +43,4 @@ $border-radius-sm: 2px;
 		border: none;
 		border-radius: 15px;
 		background: white;
-		
 }
