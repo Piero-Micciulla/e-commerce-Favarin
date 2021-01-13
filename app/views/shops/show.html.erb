@@ -3,23 +3,60 @@
 <p><%= @shop.address %></p>
 <p><%#= @shop.rating %></p>
 
+
+<div id="carouselControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item w-30 active">
+      <div class="notification">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="notification-content">
+            <p><small><%= @shop.reviews.first.created_at.strftime("%m/%d/%Y") %></small></p>
+            <div class="review-content"><%= @shop.reviews.first.content %></div>
+            <p><small><%= @shop.reviews.first.user.given_name %> <%= @shop.reviews.first.user.family_name %></small></p>
+          </div>
+        </div>
+    </div>
+    <div class="carousel-item w-30">
+      <div class="notification">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="notification-content">
+            <p><small><%= @shop.reviews[1].created_at.strftime("%m/%d/%Y") %></small></p>
+            <div class="review-content"><%= @shop.reviews[1].content %></div>
+            <p><small><%= @shop.reviews[1].user.given_name %> <%= @shop.reviews[1].user.family_name %></small></p>
+          </div>
+        </div>
+    </div>
+    <div class="carousel-item w-30">
+      <div class="notification">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="notification-content">
+            <p><small><%= @shop.reviews.last.created_at.strftime("%m/%d/%Y") %></small></p>
+            <div class="review-content"><%= @shop.reviews.last.content %></div>
+            <p><small><%= @shop.reviews.last.user.given_name %> <%= @shop.reviews.last.user.family_name %></small></p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+<!--
 <ul class="list-group">
-  <% @shop.reviews.each do |review| %>
+  <#% @shop.reviews.each do |review| %>
     <li class="list-group-item">
-      <%= review.content %>
-      <%= link_to "Remove",
+      <#%= review.content %>
+      <#%= link_to "Remove",
                   review_path(review),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
     </li>
-  <% end %>
+  <#% end %>
 </ul>
 
-<%= link_to "Delete #{@shop.name}",
+<#%= link_to "Delete #{@shop.name}",
             shop_path(@shop),
             method: :delete,
-            data: { confirm: "Are you sure?" } %>
+            data: { confirm: "Are you sure?" } %> -->
 
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%#= link_to 'Edit', edit_shop_path(@shop) %> |
 <%= link_to 'Back', shops_path %> |
-<%= link_to 'Leave a review', new_shop_review_path(@shop) %>
+<%#= link_to 'Leave a review', new_shop_review_path(@shop) %>
