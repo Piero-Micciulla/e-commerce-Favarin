@@ -232,6 +232,7 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+        #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -239,6 +240,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -246,6 +249,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -253,6 +258,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -260,6 +267,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -267,6 +276,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -274,6 +285,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -281,6 +294,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -288,6 +303,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -295,6 +312,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -302,6 +321,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -309,6 +330,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -316,6 +339,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -323,6 +348,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: presina.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -330,6 +357,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -337,6 +366,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
     Product.create!(
         name: PRODUCTS_NAMES.sample,
@@ -344,6 +375,8 @@ puts "Creating 7 reviews"
         reference_number: (100000..999999).to_a.sample,
         shop_id: grantorto.id,
         category: CATEGORIES.sample,
+                #article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
         )
       puts "Created #{Product.count} products for shops..."
 

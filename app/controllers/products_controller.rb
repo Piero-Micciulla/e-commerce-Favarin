@@ -49,7 +49,7 @@ class ProductsController < ApplicationController
   private
 
   def strong_params
-    params.require(:product).permit(:price_per_unit, :reference_number, :category, :sold_status)
+    params.require(:product).permit(:price_per_unit, :reference_number, :category, :sold_status, :photo)
   end
 
   def find_products

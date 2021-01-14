@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :shop, touch: true
+  belongs_to :shop
   belongs_to :user
 
   validates :shop, presence: true

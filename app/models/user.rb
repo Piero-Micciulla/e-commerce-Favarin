@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :shops, dependent: :destroy
   has_many :carts, dependent: :destroy
+  has_one_attached :photo
   validates :given_name, presence: true, length: { minimum: 2 }
   validates :family_name, presence: true, length: { minimum: 2 }
   validates :address, presence: true

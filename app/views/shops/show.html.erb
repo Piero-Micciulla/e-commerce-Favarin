@@ -39,24 +39,28 @@
   </div>
 
 </div>
-<!--
-<ul class="list-group">
-  <#% @shop.reviews.each do |review| %>
-    <li class="list-group-item">
-      <#%= review.content %>
-      <#%= link_to "Remove",
-                  review_path(review),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-    </li>
-  <#% end %>
-</ul>
 
-<#%= link_to "Delete #{@shop.name}",
-            shop_path(@shop),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %> -->
+<h1>Produtcs</h1>
 
-<%#= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %> |
-<%#= link_to 'Leave a review', new_shop_review_path(@shop) %>
+<% @shop.products.each do |product| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <%#= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="card-product-infos">
+      <h2><%= product.name %></h2>
+      <p><%= product.category %></p>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+      <p><%= product.price %>€</p>
+      <p><%= product.reference_number %></p>
+    </div>
+  </div>
+<% end %>
+<%= link_to 'Back', root_path %> |
+<%= link_to 'Leave a review', new_shop_review_path(@shop) %>
+
+
+
+
+
+
+
