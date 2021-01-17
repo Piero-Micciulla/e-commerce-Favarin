@@ -1,3 +1,5 @@
+
+<div class="new-product">
 <%= simple_form_for(@product) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -7,7 +9,7 @@
   <%= f.text_field :reference_number %>
   <%= f.label :price %>
   <%= f.number_field :price %>
-  <%= f.label :photo %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
+</div>

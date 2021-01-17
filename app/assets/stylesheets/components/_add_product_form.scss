@@ -1,0 +1,29 @@
+.new-product {
+    padding: 0.4em;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size:  14px;
+        }
+        input[type=text], input[type=number] {
+            max-width: 500px;
+            padding: 5px;
+            margin-bottom: 5px;
+            border: none;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type=submit] {
+            border: none;
+            background-color: $red;
+            color:white;
+            font-weight:550;
+            max-width: 500px;
+            padding: 10px 0;
+        }
+
+    }
+
+}

@@ -84,6 +84,5 @@ ActiveRecord::Schema.define(version: 2021_01_10_130254) do
   add_foreign_key "carts", "users"
   add_foreign_key "products", "shops"
   add_foreign_key "reviews", "shops"
-  add_foreign_key "reviews", "users"
   add_foreign_key "shops", "users"
 end
