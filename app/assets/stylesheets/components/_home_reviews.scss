@@ -1,15 +1,25 @@
 .notification {
-  display: flex;
   align-items: center;
   margin-bottom: 8px;
   background: white;
   padding: 8px 16px;
   border: 1px solid rgb(235,235,235);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
 }
+
+
+
 
 .notification .notification-content {
   flex-grow: 1;
-  padding: 0 24px;
+  width: 100%;
+
 }
 
 .notification p {
@@ -22,8 +32,8 @@
   font-weight: bold;
 }
 
-.review-content{
-  border-top: 2px solid   #D3D3D3;
-  border-bottom: 2px solid  #D3D3D3;
-
+.avatar-name {
+  height: 50px;
+  align-items: center;
+  padding-left: 10px;
 }

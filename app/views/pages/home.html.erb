@@ -52,15 +52,21 @@
 <!-----------------------------
 	REVIEWS SECTION
 ------------------------------>
-<div class="reviews">
-    <div class="container d-flex">
+<div class="reviews container">
+<h4>Cosa i nostri clienti pensano di noi..</h4>
+    <div class="notification-container">
       <% Shop.first.reviews.each do |review| %>
-        <div class="notification">
+        <div class="notification m-1">
+        <div class="d-flex">
           <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-          <div class="notification-content">
-            <p><small><%= review.created_at.strftime("%m/%d/%Y") %></small></p>
-            <div class="review-content"><%= review.content %></div>
+          <div class="d-flex w-100 justify-content-between avatar-name">
             <p><small><%= review.user.given_name %> <%= review.user.family_name %></small></p>
+            <p><small><%= review.created_at.strftime("%m/%d/%Y") %></small></p>
+          </div>
+        </div>
+          <div class="notification-content">
+            <div class="review-content"><%= review.content %>
+            </div>
           </div>
         </div>
         <% end %>
